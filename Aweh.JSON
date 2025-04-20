@@ -6,7 +6,7 @@
     "id": "WS500",
     "name": "Aweh",
     "creator": "Wakespeed Configuration Application",
-    "date": "Apr 17, 2025",
+    "date": "Apr 20, 2025",
     "release": "0.0.0",
     "expert": true
   },
@@ -18,7 +18,7 @@
       "WS3000r"
     ],
     "firmware": [
-      "2.5.2+"
+      "2.2.2+"
     ]
   },
   "components": {
@@ -76,9 +76,9 @@
     },
     "DCDC": {
       "brand": "Wakespeed",
-      "model": "None",
+      "model": "WS48-12X",
       "mode": 0,
-      "notes": ""
+      "notes": "Use in conjunction with WS500 or WS500 Pro"
     }
   },
   "configuration": {
@@ -110,8 +110,8 @@
       "IGNORE_SENSOR_CURRENT": false,
       "IGNORE_SENSOR_STATOR": true,
       "IGNORE_SENSOR_FEATURE_IN": true,
-      "ALTERNATOR_POLES": 12,
-      "ENGINE_ALT_DRIVE_RATIO": 1.6875,
+      "ALTERNATOR_POLES": 2,
+      "ENGINE_ALT_DRIVE_RATIO": 2.388,
       "FIELD_TACH_PWM": 0,
       "FORCED_TM": false,
       "HALF_POWER_RPM": 0,
@@ -149,7 +149,7 @@
       "CAN_BIT_RATE": 0,
       "DC_DISCONNECT_VBAT": 0.0,
       "AGGREGATE": 0,
-      "ENABLE_DVCC": true
+      "ENABLE_DVCC": false
     },
     "DCDC": {
       "SET_POINT_VOLTS": 0.0,
