@@ -6,7 +6,7 @@
     "id": "WS500",
     "name": "Aweh",
     "creator": "Wakespeed Configuration Application",
-    "date": "Apr 20, 2025",
+    "date": "Apr 22, 2025",
     "release": "0.0.0",
     "expert": true
   },
@@ -18,7 +18,7 @@
       "WS3000r"
     ],
     "firmware": [
-      "2.2.2+"
+      "2.5.2+"
     ]
   },
   "components": {
@@ -40,15 +40,15 @@
     "battery": {
       "brand": "Victron",
       "model": "LFP-Smart 25,6/200",
-      "CPEid": "Victron Smart-Lithium",
+      "CPEid": "Victron Lynx BMS Get-home",
       "batteryCount": 5,
       "batteryAh": 200,
       "notes": "'Smart' Batteries series.  Make sure to use compatible BMS"
     },
     "BMS": {
       "brand": "Victron",
-      "model": "Lynx Smart BMS (Simple)",
-      "notes": "Simplified wiring, only CAN connection needed.  BMS directs charging.  Use RJ45 cross-over cable. No need to connect Feature-In wire."
+      "model": "Lynx Smart BMS",
+      "notes": "BMS directs charging.  Use RJ45 cross-over cable. Connect Feature-In wire to BMS to enable 'Get-home-mode'  (see detailed wiring diagram above on the 'pdf' link or www.victronenergy.com)"
     },
     "ENGINE": {
       "j1939MAXLOAD": 0,
@@ -86,7 +86,7 @@
       "ALT_TEMP_SETPOINT": 100.0,
       "ALT_AMP_DERATE_NORMAL": 1.0,
       "ALT_AMP_DERATE_SMALL_MODE": 0.75,
-      "ALT_AMP_DERATE_HALF_POWER": 0.5,
+      "ALT_AMP_DERATE_HALF_POWER": 0.0,
       "ALT_PULLBACK_FACTOR": 0,
       "ALT_AMPS_LIMIT": 120,
       "ALT_WATTS_LIMIT": 0,
@@ -101,7 +101,7 @@
       "REQUIRED_SENSOR_ATS": true,
       "REQUIRED_SENSOR_BTS": false,
       "REQUIRED_SENSOR_CURRENT": false,
-      "REQUIRED_SENSOR_RBM": true,
+      "REQUIRED_SENSOR_RBM": false,
       "REQUIRED_SENSOR_DCDC": false,
       "REQUIRED_SENSOR_FAULT_OVERRIDE": true,
       "SET_IGNORE_SENSOR": true,
@@ -109,7 +109,7 @@
       "IGNORE_SENSOR_BTS": false,
       "IGNORE_SENSOR_CURRENT": false,
       "IGNORE_SENSOR_STATOR": true,
-      "IGNORE_SENSOR_FEATURE_IN": true,
+      "IGNORE_SENSOR_FEATURE_IN": false,
       "ALTERNATOR_POLES": 2,
       "ENGINE_ALT_DRIVE_RATIO": 2.388,
       "FIELD_TACH_PWM": 0,
@@ -125,7 +125,7 @@
       "BC_MULT_OVERRIDE": 2.0,
       "SV_OVERRIDE": 2.0,
       "CONFIG_LOCKOUT": 0,
-      "FEATURE_IN_MODIFIER": 0,
+      "FEATURE_IN_MODIFIER": 2,
       "FEATURE_OUT_MODIFIER": 0,
       "ENABLE_WIRELESS": true,
       "DEVICE_NAME": "Alternator",
@@ -149,7 +149,7 @@
       "CAN_BIT_RATE": 0,
       "DC_DISCONNECT_VBAT": 0.0,
       "AGGREGATE": 0,
-      "ENABLE_DVCC": false
+      "ENABLE_DVCC": true
     },
     "DCDC": {
       "SET_POINT_VOLTS": 0.0,

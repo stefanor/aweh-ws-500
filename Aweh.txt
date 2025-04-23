@@ -1,11 +1,11 @@
 # Configuration file for Aweh
 #
-#     Apr 20, 2025
-#     Battery system: Victron, LFP-Smart 25,6/200, Victron Smart-Lithium, 5, 200
+#     Apr 22, 2025
+#     Battery system: Victron, LFP-Smart 25,6/200, Victron Lynx BMS Get-home, 5, 200
 #     Battery notes: 'Smart' Batteries series.  Make sure to use compatible BMS.
 #     Alternator: Generic, 24v
-#     BMS: Victron, Lynx Smart BMS (Simple)
-#     BMS notes: Simplified wiring, only CAN connection needed.  BMS directs charging.  Use RJ45 cross-over cable. No need to connect Feature-In wire.
+#     BMS: Victron, Lynx Smart BMS
+#     BMS notes: BMS directs charging.  Use RJ45 cross-over cable. Connect Feature-In wire to BMS to enable 'Get-home-mode'  (see detailed wiring diagram above on the 'pdf' link or www.victronenergy.com).
 #     DCDC: Wakespeed, WS48-12X
 #     DCDC notes: Use in conjunction with WS500 or WS500 Pro
 .
@@ -15,12 +15,12 @@
 #     (c)2023 Dragonfly Energy
 #
 # Aweh config file
-$CCN: 1,1,70,0,0,1,1,17,0,0,0.00,0,0,0@
-$SCA: 0,100,1.00,0.75,0.50,0,120,0,10000,0,0,30,137,24,0@
+$CCN: 1,1,70,0,0,1,1,17,0,0,0.00,0,1,0@
+$SCA: 0,100,1.00,0.75,0.00,0,120,0,10000,0,0,30,129,8,0@
 $SCT: 2,2.388,0,0,0@
 $SCN: 1,Alternator,1234@
-$SCO: 8,2.00,2.00,0,0,0,0@
-$DEP: AREG2.2.2@
+$SCO: 8,2.00,2.00,0,2,0,0@
+$DEP: AREG2.5.2@
 $CPA:8 14.20,120,15,0@
 $CPO:8 0,0,0.00,0@
 $CPF:8 13.50,0,0,0,-50,12.90,80@
